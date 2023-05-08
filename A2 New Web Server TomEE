@@ -1,0 +1,35 @@
+//Name:Roland Swift
+//Student Number:12174746
+//Assignment 2 Web Server TomEE
+
+
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/data")
+public class DataResource {
+    
+    @GET
+    @Path("/fire")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<FireData> getFireData() {
+        // retrieve and return current and historical fire data from the database
+    }
+    
+    @GET
+    @Path("/drone")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<DroneData> getDroneData() {
+        // retrieve and return current and historical drone data from the database
+    }
+    
+    @GET
+    @Path("/truck")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<TruckData> getTruckData() {
+        // retrieve and return current and historical fire truck data from the database
+    }
+}
