@@ -3,7 +3,6 @@
 //Assignment 2 Web Server TomEE
 
 
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -33,3 +32,64 @@ public class DataResource {
         // retrieve and return current and historical fire truck data from the database
     }
 }
+
+----------------------------------------------------------------------
+
+I have been working on the requirements of Section b. 2.3.
+
+
+//Name:Roland Swift
+//Student Number:12174746
+//Assignment 2 Web Server TomEE
+
+
+import javax.ws.rs.GET; 
+import javax.ws.rs.POST; 
+import javax.ws.rs.Path; 
+import javax.ws.rs.PathParam; 
+import javax.ws.rs.Produces; 
+import javax.ws.rs.core.MediaType; 
+
+@Path("/data") 
+    
+    @GET 
+    @Path("/fire") 
+    @Produces(MediaType.APPLICATION_JSON) 
+    
+        
+    }
+    
+    
+    @Produces(MediaType.APPLICATION_JSON) /
+    public List<DroneData> getDroneData() {
+        // Retrieve current and historical drone data from the database
+        // Return the data as a list of DroneData objects
+    }
+    
+    @GET // Define HTTP method for this endpoint
+    @Path("/truck") 
+    @Produces(MediaType.APPLICATION_JSON) 
+    public List<TruckData> getTruckData() {
+
+    }
+    
+    @POST 
+    @Path("/truck/{fireId}") 
+    public Response sendFireTruck(@PathParam("fireId") int fireId) {
+        
+        return Response.ok().build(); 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
