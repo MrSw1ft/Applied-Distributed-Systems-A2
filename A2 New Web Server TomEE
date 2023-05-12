@@ -141,6 +141,31 @@ public class WebServer {
 }
 
 
+-------------------------------------------
+//Name:Roland Swift
+//Student Number:12174746
+//Assignment 2 Web Server TomEE
+
+package com.mycompany.drone_web_server;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Connect1 {
+    public java.sql.Connection con = null;
+
+    public Connect1() throws ClassNotFoundException, SQLException {
+        // Load the MySQL JDBC driver
+        Class.forName("com.mysql.jdbc.Driver");
+
+        // Establish a connection to the MySQL database
+        // Replace the connection URL, username, and password with your own
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ibdms_server", "root", "");
+    }
+}
+
+
 
 
 
